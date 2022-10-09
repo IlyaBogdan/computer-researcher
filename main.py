@@ -16,3 +16,8 @@ for key_name, path in keys.items():
     branch, hive, key = path
     print("{0}: {1}".format(key_name, regReader.get_value(branch, hive, key)))
 
+net_info = IPinformator('10.168.190.160').get_info()
+
+print("\nNet information")
+for key, value in net_info.items():
+    print("{0}: {1}".format(key, value))
